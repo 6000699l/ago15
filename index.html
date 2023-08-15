@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Traslacion de vectores</h1>
+    <p> vector Original <input id="Vo"/> </p>
+    <p> vector Traslación <input id="Vt"/> </p>
+    <p> vector Resultado </p>
+    <button id="B_traslacion" onclick="Traslacion()">Realizar traslacion</button>
+
+
+    <script>
+        function Traslacion(){
+            //leer datos del vector original
+            var v_o = document.getElementById("Vo").value;
+            v_o = v_o.split( "," );  
+            VO = []; 
+            VT = [];    
+            var v_t = document.getElementById("Vt").value;
+            v_t = v_t.split( "," );
+            var t =v_o.length
+            alert(v_o.length+" "+v_t.length);
+            v_o.forEach(element => {
+                VO.push(Number(element))
+            });
+            v_t.forEach(element => {
+                VT.push(Number(element))
+            });
+            var v_r = [];
+
+            for(var i=0;i<t;i++)
+            {
+                v_r[i]=VO[i]+VT[i];
+
+
+            }
+
+            alert("vector resultante ="+v_r[0]+","+v_r[1]+","+v_r[2])
+
+
+        }
+
+    </script>
+</body>
+</html>
